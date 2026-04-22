@@ -15,10 +15,9 @@ import (
 )
 
 const (
-	address = "localhost" // address of chat server
-	port    = "1337"      // port of chat server
-	zero    = 25          // delay in milliseconds to be detected as a 0
-	one     = 100         // delay in milliseconds to be detected as a 1
+	address = "138.47.99.21" // address of chat server
+	port    = "31337"      // port of chat server
+	threshold = 53.75     // midpoint between observed delay times
 )
 
 func main() {
@@ -45,13 +44,13 @@ func main() {
 		}
 
 		now := time.Now()
-		delay := now.Sub(previousTime).Milliseconds() // calculate delay between characters
+		delay := now.Sub(previousTime).Seconds() * 1000 // calculate delay between characters
 		previousTime = now
 		fmt.Print(string(buffer[0]))
 		var char rune
 
 		// determine if delay corresponds to 1 or 0
-		if delay < one {
+		if delay < threshold {
 			bits = append(bits, 0)
 		} else {
 			bits = append(bits, 1)
