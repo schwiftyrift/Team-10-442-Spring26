@@ -1,6 +1,6 @@
 /*
 ####################################################################################
-#   Author: Jared Newton                                                           #
+#   Author: Team 10 - Titan                                                        #
 #   Date: 05/06/2026                                                               #
 #   Description: A program written in go that uses stegenography algorithms        #
 #       to encode and decode files into and from a wrapper file                    #
