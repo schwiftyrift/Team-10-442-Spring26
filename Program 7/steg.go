@@ -1,9 +1,9 @@
 /*
 ####################################################################################
 #   Author: Jared Newton                                                           #
-#   Date: 04/28/2026                                                               #
-#   Description: A program written in go that takes a file input from stdin        #
-#       and performs an XOR with a key file                                        #
+#   Date: 05/06/2026                                                               #
+#   Description: A program written in go that uses stegenography algorithms        #
+#       to encode and decode files into and from a wrapper file                    #
 ####################################################################################
 */
 
